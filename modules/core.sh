@@ -9,4 +9,9 @@ rpm-ostree override remove\
     firefox-langpacks\
     gnome-shell-extension-background-logo
 
+rpm-ostree install \
+    loupe\
+    celluloid\
+    WoeUSB
+
 echo -e "\e[32m[End Core Module]\e[0m"

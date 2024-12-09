@@ -15,7 +15,6 @@ rpm-ostree install \
     WoeUSB\
     stow
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "#!/usr/bin/env bash" > /etc/profile.d/brew.sh
 echo '[[ -d /home/linuxbrew/.linuxbrew && $- == *i* ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /etc/profile.d/brew.sh
 

@@ -3,4 +3,4 @@
 rpm-ostree install\
     steam\
     gamescope\
-    magohud
+    mangohud

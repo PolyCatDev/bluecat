@@ -24,10 +24,6 @@ If anyone is using these images please reach out with a bug report so that I don
 ### Included apps
 - [Loupe](https://apps.gnome.org/Loupe/)
 - [Celluloid](https://celluloid-player.github.io/)
-- [Calendar](https://flathub.org/apps/org.gnome.Calendar)
-- [ExtensionManager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
-- [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
-- [Gearlever](https://flathub.org/apps/it.mijorus.gearlever)
 - [Steam](https://store.steampowered.com/)
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)

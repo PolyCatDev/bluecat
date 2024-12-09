@@ -6,6 +6,6 @@ RELEASE="$(rpm -E %fedora)"
 
 cd /tmp
 
-source ./modules/cleaner.sh
+source ./modules/core.sh
 source ./modules/dev-tools.sh
 source ./modules/steam.sh

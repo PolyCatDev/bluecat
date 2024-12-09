@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "\e[38;5;214m[Start Dev-Tools Module]\e[0m"
+
 curl -fsSL https://download.docker.com/linux/fedora/docker-ce.repo > /etc/yum.repos.d/docker-ce.repo
 
 tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
@@ -24,3 +26,5 @@ rpm-ostree install\
     gnome-terminal-nautilus\
 
 systemctl enable docker.service
+
+echo -e "\e[32m[End Dev-Tools Module]\e[0m"

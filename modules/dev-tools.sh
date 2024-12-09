@@ -11,4 +11,7 @@ gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 metadata_expire=1h
 EOF
 
-rpm-ostree install codium
+rpm-ostree install\
+    codium\
+    gnome-terminal\
+    gnome-terminal-nautilus\

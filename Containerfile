@@ -11,6 +11,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 ### 3. MODIFICATIONS
 COPY build.sh /tmp/build.sh
+COPY modules /tmp/modules
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \

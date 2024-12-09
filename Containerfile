@@ -1,7 +1,7 @@
 ## 1. BUILD ARGS
 
-ARG SOURCE_IMAGE="bazzite"
-ARG SOURCE_SUFFIX=""
+ARG SOURCE_IMAGE="silverblue"
+ARG SOURCE_SUFFIX="-main"
 ARG SOURCE_TAG="latest"
 
 

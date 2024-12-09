@@ -12,6 +12,11 @@ rpm-ostree override remove\
 rpm-ostree install \
     loupe\
     celluloid\
-    WoeUSB
+    WoeUSB\
+    stow
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "#!/usr/bin/env bash" > /etc/profile.d/brew.sh
+echo '[[ -d /home/linuxbrew/.linuxbrew && $- == *i* ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /etc/profile.d/brew.sh
 
 echo -e "\e[32m[End Core Module]\e[0m"

@@ -6,4 +6,4 @@ RELEASE="$(rpm -E %fedora)"
 
 cd /tmp
 
-./modules/steam.sh
+source ./modules/steam.sh

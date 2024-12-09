@@ -9,3 +9,5 @@ cd /tmp
 source ./modules/core.sh
 source ./modules/dev-tools.sh
 source ./modules/steam.sh
+
+cd ..

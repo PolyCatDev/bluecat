@@ -38,4 +38,22 @@ The intended way to use this image is to use [Flatpak](https://www.flatpak.org/)
 
 ## Installation
 
-Instructions can be found in the wiki (WIP)
+1. You first need a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/) installed.
+2. Then you debase with these commands
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/bluecat:latest
+  ```
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
+- Then rebase to the signed image, like so:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/bluecat:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+  ```
+  

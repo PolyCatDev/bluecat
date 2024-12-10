@@ -6,4 +6,6 @@ rpm-ostree install\
     v4l2loopback\
     akmod-v4l2loopback
 
+modprobe v4l2loopback
+
 echo -e "\e[32m[End AKMods Module]\e[0m"

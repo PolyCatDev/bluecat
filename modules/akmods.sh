@@ -7,6 +7,4 @@ rpm-ostree install\
     kernel-devel\
     kernel-headers
 
-modprobe v4l2loopback
-
 echo -e "\e[32m[End AKMods Module]\e[0m"

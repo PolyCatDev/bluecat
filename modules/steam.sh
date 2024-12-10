@@ -3,9 +3,9 @@
 
 echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
 
-curl -o otd.rpm https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
-rpm-ostree install ./otd.rpm
-rm -f ./otd.rpm
+wget https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+rpm-ostree install ./OpenTabletDriver.rpm
+rm -f ./OpenTabletDriver.rpm
 
 rpm-ostree install\
     steam\

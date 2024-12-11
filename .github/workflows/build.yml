@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
-        variant: [amd, nvidia]  # Define the two variants
+        variant: [amd-intel, nvidia]  # Define the two variants
     env:
       VARIANT: ${{ matrix.variant }}
       CONTAINERFILE: ${{ matrix.variant == 'amd' && './Containerfile' || './Containerfile-Nvidia' }}

@@ -1,5 +1,5 @@
 ---
-name: build-ublue-custom
+name: build-bluecat-nvidia
 on:
   pull_request:
     branches:

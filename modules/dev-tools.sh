@@ -27,4 +27,11 @@ rpm-ostree install\
 
 systemctl enable docker.service
 
+wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz
+tar -xf Hack.tar.xz
+rm -f Hack.tar.xz
+mkdir HackNerdFont
+mv HackNerdFont*.ttf HackNerdFont
+mv ./HackNerdFont /usr/share/fonts/
+
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

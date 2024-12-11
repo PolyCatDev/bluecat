@@ -32,7 +32,8 @@ jobs:
     env:
       VARIANT: ${{ matrix.variant }}
       CONTAINERFILE: ${{ matrix.variant == 'amd' && './Containerfile' || './Containerfile-Nvidia' }}
-      IMAGE_NAME_SUFFIX: ${{ matrix.variant }}
+      IMAGE_NAME_SUFFIX: ${{ matrix.variant == 'nvidia' && '-nvidia' || '' }}
+
 
     permissions:
       contents: read

@@ -18,8 +18,9 @@ If anyone is using these images please reach out with a bug report so that I don
 
 - All the uBlue backend goodies
 - Firefox removed (install web browser from software centre or cli)
+- Hack Nerd Font included
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/) and [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) extensions included
-- v4l2loopback kernel module for obs virtual webcam
+- v4l2loopback kernel module for obs virtual webcam (WIP)
 
 ### Included apps
 - [Loupe](https://apps.gnome.org/Loupe/)

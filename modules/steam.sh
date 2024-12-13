@@ -8,7 +8,7 @@ rpm-ostree install --apply-live\
 
 git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git --branch 0.6.x
 cd OpenTabletDriver
-./eng/linux/package.sh --package RedHat --output ./dist/redhat
+source ./eng/linux/package.sh --package RedHat --output ./dist/redhat
 
 rpm-ostree install\
     ./dist/redhat/OpenTabletDriver.rpm\

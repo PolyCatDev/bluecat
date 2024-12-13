@@ -3,7 +3,8 @@
 echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
 
 rpm-ostree install --apply-live\
-    dotnet-runtime-8.0
+    dotnet-runtime-8.0\
+    dotnet-sdk-8.0
 
 
 git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git --branch 0.6.x

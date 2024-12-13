@@ -5,14 +5,18 @@ echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
 rpm-ostree install --apply-live\
     dotnet-runtime-8.0
 
-wget https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+
+git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git --branch 0.6.x
+cd OpenTabletDriver
+./eng/linux/package.sh --package RedHat --output ./dist/redhat
 
 rpm-ostree install\
-    OpenTabletDriver.rpm\
+    ./dist/redhat/OpenTabletDriver.rpm\
     steam\
     gamescope\
     mangohud
-    
-rm -f ./OpenTabletDriver.rpm
+
+cd ..
+rm -rf ./OpenTabletDriver
 
 echo -e "\e[32m[End Steam Module]\e[0m"

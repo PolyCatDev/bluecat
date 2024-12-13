@@ -40,7 +40,7 @@ The intended way to use this image is to use [Flatpak](https://www.flatpak.org/)
 ## Installation
 
 1. You first need a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/) installed.
-2. Then you debase with these commands
+2. Then you rebase with these commands
 
 > [!TIP]
 > To install the Nvidia image just rename `bluecat:latest` to `bluecat-nvidia:latest`

@@ -6,7 +6,7 @@ rpm-ostree install --apply-live\
     dotnet-runtime-8.0\
     dotnet-sdk-8.0
 
-export DOTNET_ROOT="$HOME/.dotnet"
+export DOTNET_ROOT="/tmp/.dotnet"
 mkdir -p "$DOTNET_ROOT"
 export PATH="$DOTNET_ROOT:$PATH"
 

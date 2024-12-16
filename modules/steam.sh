@@ -7,7 +7,7 @@ rpm-ostree install --apply-live\
     dotnet-sdk-8.0
 
 
-mkdir /root/.dotnet
+mkdir -p /root/.dotnet
 git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git --branch 0.6.x
 cd OpenTabletDriver
 source ./eng/linux/package.sh --package RedHat --output ./dist/redhat

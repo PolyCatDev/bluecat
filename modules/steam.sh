@@ -6,8 +6,10 @@ rpm-ostree install --apply-live\
     dotnet-runtime-8.0\
     dotnet-sdk-8.0
 
+export DOTNET_ROOT="$HOME/.dotnet"
+mkdir -p "$DOTNET_ROOT"
+export PATH="$DOTNET_ROOT:$PATH"
 
-mkdir -p /root/.dotnet
 git clone https://github.com/OpenTabletDriver/OpenTabletDriver.git --branch 0.6.x
 cd OpenTabletDriver
 source ./eng/linux/package.sh --package RedHat --output ./dist/redhat
@@ -20,6 +22,5 @@ rpm-ostree install\
 
 cd ..
 rm -rf ./OpenTabletDriver
-rm -rf /root/.dotnet
 
 echo -e "\e[32m[End Steam Module]\e[0m"

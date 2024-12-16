@@ -4,7 +4,12 @@ echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
 
 rpm-ostree install --apply-live\
     dotnet-runtime-8.0\
-    dotnet-sdk-8.0
+    dotnet-sdk-8.0 \
+    libx11 \
+    libxrandr \
+    libevdev \
+    gtk3
+
 
 export DOTNET_ROOT="/tmp/.dotnet"
 mkdir -p "$DOTNET_ROOT"

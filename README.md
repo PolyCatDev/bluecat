@@ -28,6 +28,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Steam](https://store.steampowered.com/)
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
+- [Ghostty](https://ghostty.org/)
 - [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
 - [Open Tablet Driver](https://opentabletdriver.net/) (temporarily disabled)

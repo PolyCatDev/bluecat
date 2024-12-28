@@ -15,6 +15,8 @@ gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 metadata_expire=1h
 EOF
 
+dnf copr enable pgdev/ghostty
+
 rpm-ostree install\
     docker-ce\
     docker-ce-cli\
@@ -22,8 +24,8 @@ rpm-ostree install\
     docker-buildx-plugin\
     docker-compose-plugin\
     codium\
-    gnome-terminal\
-    gnome-terminal-nautilus\
+    ghostty
+    
 
 systemctl enable docker.service
 

@@ -29,6 +29,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
 - [Ghostty](https://ghostty.org/)
+- [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
 - [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
 - [Open Tablet Driver](https://opentabletdriver.net/) (temporarily disabled)

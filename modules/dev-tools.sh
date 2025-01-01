@@ -24,6 +24,7 @@ rpm-ostree install\
     docker-buildx-plugin\
     docker-compose-plugin\
     codium\
+    android-tools\
     ghostty
     
 

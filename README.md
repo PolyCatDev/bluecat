@@ -1,7 +1,7 @@
 # BlueCat
 
 >[!Warning]
->This image is still under heavy development and is not stable at the moment
+>This image is still under development and is not stable at the moment
 
 An opinionated tweaked [ublue](https://universal-blue.org/) image based on [silverblue-main](https://github.com/ublue-os/main/pkgs/container/silverblue-main).
 

@@ -29,7 +29,6 @@ rpm-ostree install\
 
 systemctl enable docker.service
 
-rpm-ostree apply-live nautilus-python python3-pip
 pip install nautilus-open-any-terminal
 
 

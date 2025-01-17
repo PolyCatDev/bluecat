@@ -26,9 +26,9 @@ rpm-ostree install\
     codium\
     android-tools\
     ghostty
-    
 
-pip install nautilus-open-any-terminal --break-system-packages
+
+python3 -m ensurepip --upgrade && python3 -m pip install nautilus-open-any-terminal --break-system-packages
 
 systemctl enable docker.service
 

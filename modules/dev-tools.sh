@@ -29,8 +29,13 @@ rpm-ostree install\
 
 systemctl enable docker.service
 
-rpm-ostree install nautilus-python python3-pip
-pip install nautilus-open-any-terminal
+rpm-ostree install nautilus-python
+git clone https://github.com/Stunkymonkey/nautilus-open-any-terminal.git
+cd nautilus-open-any-terminal
+make
+make install-nautilus schema
+cd ..
+rm -rf nautilus-open-any-terminal
 
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

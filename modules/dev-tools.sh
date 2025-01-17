@@ -28,7 +28,7 @@ rpm-ostree install\
     ghostty
     
 
-pip3 install nautilus-open-any-terminal --break-system-packages
+pip install nautilus-open-any-terminal --break-system-packages
 
 systemctl enable docker.service
 

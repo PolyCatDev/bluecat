@@ -2,10 +2,6 @@
 
 echo -e "\e[38;5;214m[Start Core Module]\e[0m"
 
-# Live Deploy Libs
-rpm-ostree install nautilus-python python3-pip
-rpm-ostree apply-live
-
 # Remove Unwanted Packages
 rpm-ostree override remove\
     ptyxis\

@@ -28,6 +28,8 @@ rpm-ostree install\
     ghostty
     
 
+pip3 install nautilus-open-any-terminal --break-system-packages
+
 systemctl enable docker.service
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

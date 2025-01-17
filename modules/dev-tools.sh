@@ -30,6 +30,7 @@ rpm-ostree install\
 
 systemctl enable docker.service
 
-cp scripts/nautilus-open-in-terminal.py /usr/share/nautilus-python/extensions
+wget https://raw.githubusercontent.com/PolyCatDev/bluecat/refs/heads/main/scripts/nautilus-open-in-terminal.py
+mv nautilus-open-in-terminal.py /usr/share/nautilus-python/extensions
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

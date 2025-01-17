@@ -25,17 +25,11 @@ rpm-ostree install\
     docker-compose-plugin\
     codium\
     android-tools\
-    ghostty
+    ghostty\
+    nautilus-python
 
 systemctl enable docker.service
 
-rpm-ostree install nautilus-python
-git clone https://github.com/Stunkymonkey/nautilus-open-any-terminal.git
-cd nautilus-open-any-terminal
-make
-make install-nautilus schema
-cd ..
-rm -rf nautilus-open-any-terminal
-
+cp scripts/nautilus-open-in-terminal.py /usr/share/nautilus-python/extensions
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

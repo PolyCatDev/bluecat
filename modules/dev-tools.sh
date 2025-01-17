@@ -27,9 +27,10 @@ rpm-ostree install\
     android-tools\
     ghostty
 
-
-python3 -m ensurepip --upgrade && python3 -m pip install nautilus-open-any-terminal --break-system-packages
-
 systemctl enable docker.service
+
+rpm-ostree apply-live nautilus-python python3-pip
+pip install nautilus-open-any-terminal
+
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

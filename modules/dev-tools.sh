@@ -31,7 +31,7 @@ rpm-ostree install\
 
 systemctl enable docker.service
 
-wget https://raw.githubusercontent.com/mwahlroos/Nautiterm/refs/heads/master/src/nautiterm/open_terminal.py
+wget https://raw.githubusercontent.com/PolyCatDev/bluecat/refs/heads/main/scripts/open_terminal.py
 mv open_terminal.py /usr/share/nautilus-python/extensions
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

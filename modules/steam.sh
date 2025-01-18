@@ -5,7 +5,6 @@ echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
 wget https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
 
 rpm-ostree install\
-    steam\
     gamescope\
     mangohud\
     ./OpenTabletDriver.rpm

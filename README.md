@@ -25,7 +25,7 @@ If anyone is using these images please reach out with a bug report so that I don
 ### Included apps
 - [Loupe](https://apps.gnome.org/Loupe/)
 - [Celluloid](https://celluloid-player.github.io/)
-- [Steam](https://store.steampowered.com/)
+- [Steam](https://store.steampowered.com/) (temporarily disabled)
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
 - [Ghostty](https://ghostty.org/)

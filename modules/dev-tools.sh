@@ -26,11 +26,12 @@ rpm-ostree install\
     codium\
     android-tools\
     ghostty\
-    nautilus-python
+    nautilus-python\
+    python3-yaml
 
 systemctl enable docker.service
 
-wget https://raw.githubusercontent.com/PolyCatDev/bluecat/refs/heads/main/scripts/nautilus-open-in-terminal.py
-mv nautilus-open-in-terminal.py /usr/share/nautilus-python/extensions
+wget https://raw.githubusercontent.com/mwahlroos/Nautiterm/refs/heads/master/src/nautiterm/open_terminal.py
+mv open_terminal.py /usr/share/nautilus-python/extensions
 
 echo -e "\e[32m[End Dev-Tools Module]\e[0m"

@@ -18,6 +18,7 @@ metadata_expire=1h
 EOF
 
 rpm-ostree install\
+    gcc\
     docker-ce\
     docker-ce-cli\
     containerd.io\

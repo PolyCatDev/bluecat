@@ -27,6 +27,7 @@ rpm-ostree install\
     codium\
     android-tools\
     ghostty\
+    nautilus-python
 
 systemctl enable docker.service
 

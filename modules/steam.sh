@@ -10,8 +10,7 @@ echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
 
 rpm-ostree install\
     gamescope\
-    mangohud\
-#    ./otd.rpm
+    mangohud
 
 #rm -f ./otd.rpm
 

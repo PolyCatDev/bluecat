@@ -15,6 +15,4 @@ rpm-ostree install\
 
 rm -f ./otd.rpm
 
-systemctl enable opentabletdriver.service
-
 echo -e "\e[32m[End Steam Module]\e[0m"

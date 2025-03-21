@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\e[38;5;214m[Start Steam Module]\e[0m"
+echo -e "\e[38;5;214m[Start Media Module]\e[0m"
 
 #curl -L -o get-otd-link.gz https://github.com/PolyCatDev/bluecat/raw/refs/heads/main/scripts/get-otd-link/get-otd-link.gz
 #gunzip get-otd-link.gz
@@ -14,4 +14,4 @@ rpm-ostree install\
 
 #rm -f ./otd.rpm
 
-echo -e "\e[32m[End Steam Module]\e[0m"
+echo -e "\e[32m[End Media Module]\e[0m"

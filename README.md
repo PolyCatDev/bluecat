@@ -17,12 +17,12 @@ If anyone is using these images please reach out with a bug report so that I don
 - Firefox removed (install web browser from software centre or cli)
 - Hack [Nerd Font](https://www.nerdfonts.com/) included
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/) and [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) extensions included
-- v4l2loopback kernel module for obs virtual webcam (WIP)
+- v4l2loopback kernel module for obs virtual webcam
 
 ### Included apps
 - [Loupe](https://apps.gnome.org/Loupe/)
 - [Celluloid](https://celluloid-player.github.io/)
-- [Steam](https://store.steampowered.com/) (temporarily disabled)
+- [ddcui](https://store.steampowered.com/) for advanced monitor configuration
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
 - [Ghostty](https://ghostty.org/)

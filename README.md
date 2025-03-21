@@ -22,7 +22,7 @@ If anyone is using these images please reach out with a bug report so that I don
 ### Included apps
 - [Loupe](https://apps.gnome.org/Loupe/)
 - [Celluloid](https://celluloid-player.github.io/)
-- [ddcui](https://store.steampowered.com/) for advanced monitor configuration
+- [ddcui](https://github.com/rockowitz/ddcui)) for advanced monitor configuration
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
 - [Ghostty](https://ghostty.org/)

@@ -8,8 +8,12 @@ ARG SOURCE_TAG="latest"
 ### 2. SOURCE IMAGE
 FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
+### 3. AKMods
+COPY --from=ghcr.io/ublue-os/akmods:main-41 /rpms/ /tmp/rpms
+RUN find /tmp/rpms
 
-### 3. MODIFICATIONS
+
+### 4. MODIFICATIONS
 COPY build.sh /tmp/build.sh
 COPY modules /tmp/modules
 

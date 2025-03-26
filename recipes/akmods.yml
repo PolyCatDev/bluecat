@@ -1,9 +1,9 @@
-# {KERNEL_VERSION} gets replaced by a step in the build process
+# KERNEL_VERSION gets replaced by a step in the build process
 # with the actual vesrion of the kernel before image build
 
 modules:
   - type: copy
-    from: ghcr.io/ublue-os/akmods:main-{KERNEL_VERSION}
+    from: ghcr.io/ublue-os/akmods:main-KERNEL_VERSION
     src: /rpms/
     dest: /tmp/rpms
 

@@ -35,11 +35,11 @@ jobs:
       - uses: actions/checkout@v4
 
       # Setup akmods install for each image based on their kernels
-      - name: Set akmods-suffix for amd-intel.yml
+      - name: Set akmods-suffix if amd-intel.yml
         if: matrix.recipe == 'amd-intel.yml'
         run: echo "AKMODS_SUFFIX=main" >> $GITHUB_ENV
 
-      - name: Set akmods-suffix for nvidia.yml
+      - name: Set akmods-suffix if nvidia.yml
         if: matrix.recipe == 'nvidia.yml'
         run: echo "AKMODS_SUFFIX=nvidia" >> $GITHUB_ENV
       
@@ -48,13 +48,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y skopeo
 
-      - name: Inspect image and extract label
+      - name: Inspect base image and extract it's kernel version
         run: |
           LABEL_VALUE=$(skopeo inspect docker://ghcr.io/ublue-os/silverblue-$AKMODS_SUFFIX:latest | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
           echo "Extracted ostree.linux label: $LABEL_VALUE"
           echo "kernel_version=$LABEL_VALUE" >> $GITHUB_ENV
         
-      - name: Modify file with extracted label
+      - name: Modify akmods.yml with extracted kernel version
         run: |
           sed -i "s/KERNEL_VERSION/$kernel_version/g" ./recipes/akmods.yml
 

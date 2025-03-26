@@ -52,11 +52,11 @@ jobs:
         run: |
           LABEL_VALUE=$(skopeo inspect docker://ghcr.io/ublue-os/silverblue-$AKMODS_SUFFIX:latest | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
           echo "Extracted ostree.linux label: $LABEL_VALUE"
-          echo "kernel_version=$LABEL_VALUE" >> $GITHUB_ENV
+          echo "KERNEL_VERSION=$LABEL_VALUE" >> $GITHUB_ENV
         
       - name: Modify akmods.yml with extracted kernel version
         run: |
-          sed -i "s/KERNEL_VERSION/$kernel_version/g" ./recipes/akmods.yml
+          sed -i "s/KERNEL_VERSION/$KERNEL_VERSION/g" ./recipes/akmods.yml
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v9

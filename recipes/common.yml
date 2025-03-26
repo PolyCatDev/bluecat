@@ -9,7 +9,7 @@ modules:
     install:
       - rpmfusion
     
-  - from: install-akmods.yml
+  - from-file: install-akmods.yml
 
   - type: gnome-extensions
     install:
@@ -38,6 +38,7 @@ modules:
       - loupe
       - celluloid
       - WoeUSB
+      - stow
       - ghostty
       - android-tools
       - codium
@@ -81,8 +82,10 @@ modules:
       #remove:
       # - org.gnome.eog
     
-  - type: script
-    scripts:
-      - enable-docker.sh
+  - type: systemd
+    system:
+      enabled:
+        - docker.service
+        - containerd.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

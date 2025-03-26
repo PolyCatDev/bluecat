@@ -59,6 +59,10 @@ jobs:
           sed -i "s/KERNEL_VERSION/${{ env.KERNEL_VERSION }}/g" ./recipes/akmods.yml
 
 
+      - name: Verify akmods.yml contents  
+        run: cat ./recipes/akmods.yml  
+
+
       # Build Image
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8

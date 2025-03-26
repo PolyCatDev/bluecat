@@ -3,7 +3,7 @@
 
 modules:
   - type: copy
-    from: ghcr.io/ublue-os/akmods:main-KERNEL_VERSION
+    from: ghcr.io/ublue-os/akmods:main-{KERNEL_VERSION}
     src: /rpms/
     dest: /tmp/rpms
 

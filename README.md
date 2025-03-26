@@ -60,3 +60,5 @@ The intended way to use this image is to use [Flatpak](https://flatpak.org/) for
   systemctl reboot
   ```
   
+## Special Thanks
+- [asen23](https://github.com/asen23) - They helped a lot with the akmods installation setup

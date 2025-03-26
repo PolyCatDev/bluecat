@@ -31,6 +31,9 @@ jobs:
           - nvidia.yml
       
     steps:
+
+      - uses: actions/checkout@v4
+
       # Setup akmods install for each image based on their kernels
       - name: Set akmods-suffix for amd-intel.yml
         if: matrix.recipe == 'amd-intel.yml'

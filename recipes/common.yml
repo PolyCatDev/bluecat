@@ -15,6 +15,7 @@ modules:
     install:
       - Caffeine
       - AppIndicator and KStatusNotifierItem Support
+      - Blur my Shell
 
   - type: fonts
     fonts:

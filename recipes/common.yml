@@ -16,17 +16,6 @@ modules:
         - JetBrainsMono
         - Hack
 
-  - type: systemd
-    system:
-      enabled:
-        - docker.service
-        - docker.socket
-        
-  #   user:
-  #     enabled:
-  #          - opentabletdriver.service
-  #    
-
   - type: brew
     brew-analytics: false
     auto-update: true

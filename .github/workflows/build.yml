@@ -56,7 +56,7 @@ jobs:
         
       - name: Modify file with extracted label
         run: |
-          sed -i "s/{KERNEL_VERSION}/$kernel_version/g" ./recipes/akmods.yml
+          sed -i "s/KERNEL_VERSION/$kernel_version/g" ./recipes/akmods.yml
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v9

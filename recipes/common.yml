@@ -20,7 +20,6 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - JetBrainsMono
         - Hack
 
   - type: brew

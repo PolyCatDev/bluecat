@@ -31,9 +31,13 @@ jobs:
           - nvidia.yml
     steps:
 
-      - name: test
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v9
+
+      - name: Inspect image and extract label
         run: |
-          echo test
+          LABEL_VALUE=bazzite-$(skopeo inspect docker://ghcr.io/ublue-os/bazzite:stable | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
+          echo "kernel_version=$LABEL_VALUE" >> $GITHUB_ENV
 
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

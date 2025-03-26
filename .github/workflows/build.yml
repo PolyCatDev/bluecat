@@ -33,11 +33,21 @@ jobs:
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v9
+      
+      - name: Install skopeo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y skopeo
 
       - name: Inspect image and extract label
         run: |
-          LABEL_VALUE=bazzite-$(skopeo inspect docker://ghcr.io/ublue-os/bazzite:stable | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
+          LABEL_VALUE=$(skopeo inspect docker://ghcr.io/ublue-os/bazzite:stable | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
+          echo "Extracted ostree.linux label: $LABEL_VALUE"
           echo "kernel_version=$LABEL_VALUE" >> $GITHUB_ENV
+        
+      - name: Modify file with extracted label
+        run: |
+          sed -i "s/{KERNEL_VERSION}/$kernel_version/g" ./recipes/akmods.yml
 
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

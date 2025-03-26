@@ -5,6 +5,12 @@ modules:
       - source: system
         destination: /
 
+  - type: bling
+    install:
+      - rpmfusion
+    
+  - from-file: akmods.yml
+
   - type: gnome-extensions
     install:
       - Caffeine
@@ -15,10 +21,6 @@ modules:
       nerd-fonts:
         - JetBrainsMono
         - Hack
-    
-  - type: bling
-    install:
-      - rpmfusion
 
   - type: brew
     brew-analytics: false

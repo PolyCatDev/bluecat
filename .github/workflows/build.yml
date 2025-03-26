@@ -56,11 +56,7 @@ jobs:
         
       - name: Modify akmods.yml with extracted kernel version
         run: |
-          sed -i "s/KERNEL_VERSION/${{ env.KERNEL_VERSION }}/g" ./recipes/common.yml
-
-
-      - name: Verify akmods.yml contents  
-        run: cat ./recipes/common.yml  
+          sed -i "s/{KERNEL_VERSION}/${{ env.KERNEL_VERSION }}/g" ./recipes/install-akmods.yml
 
 
       # Build Image

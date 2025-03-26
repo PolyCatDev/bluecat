@@ -1,8 +1,5 @@
 # BlueCat
 
->[!Important]
->This image has changed tooling and can found [here](https://github.com/PolyCatDev/bluecat).
-
 An opinionated tweaked [ublue](https://universal-blue.org/) image based on [silverblue-main](https://github.com/ublue-os/main/pkgs/container/silverblue-main).
 
 ## What is this?

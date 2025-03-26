@@ -33,7 +33,7 @@ If anyone is using these images please reach out with a bug report so that I don
 
 ## How to use
 
-The intended way to use this image is to use [Flatpak](https://flatpak.org/) for most apps and [Homebrew](https://brew.sh/) for cli tools
+The intended way to use this image is to use [Flatpak](https://flatpak.org/) for graphical apps and [Homebrew](https://brew.sh/) for cli tools
 
 ## Installation
 

@@ -1,0 +1,96 @@
+
+modules:
+
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: gnome-extensions
+    install:
+      - Caffeine
+      - AppIndicator and KStatusNotifierItem Support
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
+        - Hack
+
+  - type: systemd
+    system:
+      enabled:
+        - docker.service
+        - docker.socket
+        
+  #   user:
+  #     enabled:
+  #          - opentabletdriver.service
+  #    
+  - type: gschema-overrides
+
+  - type: brew
+    brew-analytics: false
+    auto-update: true
+    auto-upgrade: true
+    nofile-limits: true
+
+  - type: akmods
+    base: main
+    install:
+      - v4l2loopback
+
+  - type: rpm-ostree
+    repos:
+      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - codium.repo
+      - https://download.docker.com/linux/fedora/docker-ce.repo
+    install:
+      - loupe
+      - celluloid
+      - WoeUSB
+      - codium
+      #- https://github.com/OpenTabletDriver/OpenTabletDriver/releases/latest/download/OpenTabletDriver.rpm
+      - gnome-terminal
+      - gnome-terminal-nautilus
+      - steam
+      - gamescope
+      - mangohud
+
+      # Install Docker
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-compose-plugin
+
+      # Deps
+      - python3-tkinter
+      - python3-wxpython4
+
+    remove:
+      - firefox
+      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - gnome-shell-extension-background-logo
+      - ptyxis
+      - nvtop
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.Calendar
+        - com.github.tchx84.Flatseal
+        - it.mijorus.gearlever
+        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
+      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Installing different branches of the same Flatpak is not supported.
+      remove:
+      # - org.gnome.eog
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

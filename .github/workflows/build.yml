@@ -30,6 +30,11 @@ jobs:
           - amd-intel.yml
           - nvidia.yml
     steps:
+
+      - name: test
+        run: |
+          echo test
+
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8

@@ -48,7 +48,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y skopeo
 
-      - name: Inspect base image and extract it's kernel version
+      - name: Inspect base image and extract its kernel version
         run: |
           LABEL_VALUE=$(skopeo inspect docker://ghcr.io/ublue-os/silverblue-$AKMODS_SUFFIX:latest | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
           echo "Extracted ostree.linux label: $LABEL_VALUE"
@@ -56,7 +56,7 @@ jobs:
         
       - name: Modify akmods.yml with extracted kernel version
         run: |
-          sed -i "s/KERNEL_VERSION/$KERNEL_VERSION/g" ./recipes/akmods.yml
+          sed -i "s/KERNEL_VERSION/${{ env.KERNEL_VERSION }}/g" ./recipes/akmods.yml
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@v9

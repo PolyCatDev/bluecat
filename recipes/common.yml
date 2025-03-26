@@ -27,7 +27,6 @@ modules:
   #     enabled:
   #          - opentabletdriver.service
   #    
-  - type: gschema-overrides
 
   - type: brew
     brew-analytics: false

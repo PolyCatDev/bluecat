@@ -50,7 +50,6 @@ modules:
       - docker-ce-cli
       - containerd.io
       - docker-compose-plugin
-      - podman-compose
 
       # Deps
       - nautilus-python

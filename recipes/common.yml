@@ -45,11 +45,12 @@ modules:
       - gamescope
       - mangohud
 
-      # Install Docker
+      # Install Container Tools
       - docker-ce
       - docker-ce-cli
       - containerd.io
       - docker-compose-plugin
+      - podman-compose
 
       # Deps
       - nautilus-python

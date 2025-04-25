@@ -14,7 +14,7 @@ modules:
   - type: gnome-extensions
     install:
       - Caffeine
-      - AppIndicator and KStatusNotifierItem Support
+      #- AppIndicator and KStatusNotifierItem Support
       - Blur my Shell
 
   - type: fonts

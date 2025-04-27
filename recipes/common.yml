@@ -37,7 +37,7 @@ modules:
     install:
       - loupe
       - celluloid
-      #- WoeUSB
+      - gnome-tweaks
       - stow
       - ghostty
       - android-tools

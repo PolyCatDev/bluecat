@@ -44,6 +44,7 @@ modules:
       - codium
       - gamescope
       - mangohud
+      - gnome-shell-extension-appindicator
 
       # Install Container Tools
       - docker-ce

@@ -16,6 +16,7 @@ modules:
       - Caffeine
       #- AppIndicator and KStatusNotifierItem Support
       - Blur my Shell
+      - Rounded Window Corners Reborn
 
   - type: fonts
     fonts:

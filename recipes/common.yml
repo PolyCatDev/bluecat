@@ -29,41 +29,45 @@ modules:
     auto-upgrade: true
     nofile-limits: true
 
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
-      - codium.repo
-      - https://download.docker.com/linux/fedora/docker-ce.repo
+      files:
+        - https://download.docker.com/linux/fedora/docker-ce.repo
+        - codium.repo
+      copr:
+        - pgdev/ghostty
     install:
-      - loupe
-      - celluloid
-      - gnome-tweaks
-      - stow
-      - ghostty
-      - android-tools
-      - codium
-      - gamescope
-      - mangohud
-      - gnome-shell-extension-appindicator
+      packages:
+        - loupe
+        - celluloid
+        - gnome-tweaks
+        - stow
+        - ghostty
+        - android-tools
+        - codium
+        - gamescope
+        - mangohud
+        - gnome-shell-extension-appindicator
 
-      # Install Container Tools
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
-      - docker-compose-plugin
+        # Install Container Tools
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-compose-plugin
 
-      # Deps
-      - nautilus-python
-      - python3-tkinter
-      - python3-wxpython4
+        # Deps
+        - nautilus-python
+        - python3-tkinter
+        - python3-wxpython4
 
     remove:
-      - firefox
-      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-      - gnome-shell-extension-background-logo
-      - ptyxis
-      - nvtop
+      auto-remove: true
+      packages:
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - gnome-shell-extension-background-logo
+        - ptyxis
+        - nvtop
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)

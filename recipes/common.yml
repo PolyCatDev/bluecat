@@ -48,6 +48,7 @@ modules:
         - gamescope
         - mangohud
         - gnome-shell-extension-appindicator
+        - adw-gtk3-theme
 
         # Install Container Tools
         - docker-ce

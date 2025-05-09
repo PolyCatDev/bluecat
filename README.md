@@ -16,7 +16,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - All the uBlue backend goodies
 - Firefox removed (install web browser from software centre or cli)
 - Hack [Nerd Font](https://www.nerdfonts.com/) included
-- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/), [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/) and [Rounded Window Corners Reborn](https://extensions.gnome.org/extension/7048/rounded-window-corners-reborn/) extensions included
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) and [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/) extensions included
 - v4l2loopback kernel module for obs virtual webcam
 
 ### Included apps

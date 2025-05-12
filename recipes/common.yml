@@ -57,6 +57,8 @@ modules:
         - docker-compose-plugin
 
         # Deps
+        - gcc
+        - gcc-c++
         - nautilus-python
         - python3-tkinter
         - python3-wxpython4

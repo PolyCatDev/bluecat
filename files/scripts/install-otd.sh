@@ -10,6 +10,7 @@ curl -L -o otd.rpm $(./get-otd-link)
 
 # Install OTD rpm
 dnf5 install -y ./otd.rpm
+dracut --regenerate-all --force
 
 # Cleanup
 rm -f ./get-otd-link ./otd.rpm

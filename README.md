@@ -19,7 +19,7 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) and [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/) extensions included
 - v4l2loopback kernel module for obs virtual webcam
 
-### Included apps
+### Included tools and apps
 - [Loupe](https://apps.gnome.org/Loupe/)
 - [Celluloid](https://celluloid-player.github.io/)
 - [Gamescope](https://github.com/ValveSoftware/gamescope)

@@ -48,6 +48,7 @@ modules:
         - ghostty
         - android-tools
         - codium
+        - git-lfs
         - gamescope
         - mangohud
         - gnome-shell-extension-appindicator
@@ -59,6 +60,7 @@ modules:
         - docker-ce-cli
         - containerd.io
         - docker-compose-plugin
+        - lxc
 
         # Deps
         - gcc

@@ -53,7 +53,6 @@ modules:
         - mangohud
         - gnome-shell-extension-appindicator
         - adw-gtk3-theme
-        - akmods
 
         # Install Container Tools
         - docker-ce

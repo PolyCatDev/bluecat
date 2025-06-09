@@ -27,8 +27,8 @@ If anyone is using these images please reach out with a bug report so that I don
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
 - [Ghostty](https://ghostty.org/)
 - [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/)
-- [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
+- [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
 
 ## How to use
 

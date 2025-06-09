@@ -22,13 +22,13 @@ If anyone is using these images please reach out with a bug report so that I don
 ### Included tools and apps
 - [Loupe](https://apps.gnome.org/Loupe/)
 - [Celluloid](https://celluloid-player.github.io/)
+- [Open Tablet Driver](https://opentabletdriver.net/)
 - [Gamescope](https://github.com/ValveSoftware/gamescope)
 - [Mangohud](https://github.com/flightlessmango/MangoHud)
 - [Ghostty](https://ghostty.org/)
-- [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
 - [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/)
+- [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
-- [Open Tablet Driver](https://opentabletdriver.net/)
 
 ## How to use
 

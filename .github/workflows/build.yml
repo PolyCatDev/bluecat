@@ -27,9 +27,41 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe.yml
+          - amd-intel.yml
+          - nvidia.yml
+      
     steps:
-      # the build is fully handled by the reusable github action
+
+      - uses: actions/checkout@v4
+
+      # Setup akmods install for each image based on their kernels
+      - name: Set akmods-suffix if amd-intel.yml
+        if: matrix.recipe == 'amd-intel.yml'
+        run: echo "AKMODS_SUFFIX=main" >> $GITHUB_ENV
+
+      - name: Set akmods-suffix if nvidia.yml
+        if: matrix.recipe == 'nvidia.yml'
+        run: echo "AKMODS_SUFFIX=nvidia" >> $GITHUB_ENV
+      
+      - name: Install skopeo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y skopeo
+
+      - name: Inspect base image and extract its kernel version
+        run: |
+          LABEL_VALUE=$(skopeo inspect docker://ghcr.io/ublue-os/silverblue-$AKMODS_SUFFIX:latest | jq -r '"\(.Labels["org.opencontainers.image.version"] | split(".")[0])-\(.Labels["ostree.linux"])"')
+          echo "Extracted ostree.linux label: $LABEL_VALUE"
+          echo "KERNEL_VERSION=$LABEL_VALUE" >> $GITHUB_ENV
+        
+      - name: Modify akmods.yml with extracted kernel version
+        run: |
+          sed -i "s/{KERNEL_VERSION}/${{ env.KERNEL_VERSION }}/g" ./recipes/install-akmods.yml
+
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v9
+
+      # Build Image
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
         with:
@@ -37,6 +69,7 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
+          skip_checkout: true
 
           # enabled by default, disable if your image is small and you want faster builds
-          maximize_build_space: true
+          maximize_build_space: false

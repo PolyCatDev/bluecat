@@ -1,0 +1,123 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: bling
+    install:
+      - rpmfusion
+
+  - from-file: install-akmods.yml
+
+#  - type: script
+#    scripts:
+#      - install-otd.sh
+
+  - type: gnome-extensions
+    install:
+      - 517 # Caffeine
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Hack
+
+  - type: brew
+    brew-analytics: false
+    auto-update: true
+    auto-upgrade: true
+    nofile-limits: true
+
+  - type: dnf
+    repos:
+      files:
+        - https://download.docker.com/linux/fedora/docker-ce.repo
+        - codium.repo
+      copr:
+        - pgdev/ghostty
+    install:
+      packages:
+        - loupe
+        - celluloid
+        - gnome-tweaks
+        - stow
+        - ghostty
+        - btop
+        - ripgrep
+        - android-tools
+        - codium
+        - neovim
+        - git-lfs
+        - fuse-sshfs
+        - gamescope
+        - mangohud
+
+        # Extensions and Themes
+        - gnome-shell-extension-appindicator
+        - adw-gtk3-theme
+
+        # Install Container Tools
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-compose-plugin
+
+        # Deps
+        - gcc
+        - gcc-c++
+        - nautilus-python
+        - python3-devel
+        - python3-tkinter
+        - python3-wxpython4
+        - openssl
+        - libxcrypt-compat
+
+    group-install:
+      with-optional: false
+      packages:
+        - development-tools
+
+    remove:
+      auto-remove: true
+      packages:
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - gnome-shell-extension-background-logo
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-window-list
+        - gnome-shell-extension-places-menu
+        - ptyxis
+        - nvtop
+        - gnome-system-monitor
+        - gnome-tour
+        - dconf-editor
+        - htop
+        - gnome-extensions-app
+
+  - type: script
+    snippets:
+      - "sed -i 's/^Terminal=true/Terminal=false/' /usr/share/applications/nvim.desktop"
+      - "sed -i 's|^Exec=.*|Exec=/usr/bin/ghostty -e nvim %F|' /usr/share/applications/nvim.desktop"
+
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+      - scope: user
+      - install:
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.Calendar
+        - com.github.tchx84.Flatseal
+        - it.mijorus.gearlever
+        - io.missioncenter.MissionCenter
+        - org.gnome.Papers
+
+  - type: systemd
+    system:
+      enabled:
+        - docker.service
+        - containerd.service
+        - podman.service
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

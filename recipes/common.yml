@@ -16,7 +16,9 @@ modules:
 
   - type: gnome-extensions
     install:
+      - 615 # AppIndicator and KStatusNotifierItem Support
       - 517 # Caffeine
+      - 3193 # Blur my Shell
 
   - type: fonts
     fonts:
@@ -53,8 +55,7 @@ modules:
         - gamescope
         - mangohud
 
-        # Extensions and Themes
-        - gnome-shell-extension-appindicator
+        # Themes
         - adw-gtk3-theme
 
         # Install Container Tools

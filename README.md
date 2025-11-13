@@ -50,12 +50,18 @@ The intended way to use this image is to use [Flatpak](https://flatpak.org/) for
 1. You first need a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/) installed.
 2. Then you rebase with these commands
 
+### Images:
+- `bluecat:latest`
+- `bluecat-nvidia:latest`
+
+### Commands:
+
 > [!TIP]
-> To install the Nvidia image just rename `bluecat:latest` to `bluecat-nvidia:latest`
+> Replace `<image-name>` with the image you wish to use. If you have an Nvidia GPU use `bluecat-nvidia:latest`, else use `bluecat:latest`.
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/bluecat:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/<image-name>
   ```
 - Reboot to complete the rebase:
   ```
@@ -63,7 +69,7 @@ The intended way to use this image is to use [Flatpak](https://flatpak.org/) for
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/bluecat:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/<image-name>
   ```
 - Reboot again to complete the installation
   ```

@@ -50,7 +50,7 @@ If anyone is using these images please reach out with a bug report so that I don
 1. You first need a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/) installed.
 2. Then you rebase with these commands
 
-### Images:
+### Image Names:
 - `bluecat:latest`
 - `bluecat-nvidia:latest`
 

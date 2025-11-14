@@ -4,7 +4,7 @@ An opinionated tweaked [ublue](https://universal-blue.org/) image based on [silv
 
 ## What is this?
 
-This is my own tweaked image deployment that I maintain for myself. It's mainly focused on graphics, programming and gaming workloads.
+This is my own tweaked image deployment that I maintain for myself. It's mainly focused on 3D graphics, programming and gaming workloads.
 
 If anyone is using these images please reach out with a bug report so that I don't randomly change things on your computer.
 

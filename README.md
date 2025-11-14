@@ -22,28 +22,28 @@ If anyone is using these images please reach out with a bug report so that I don
 - v4l2loopback kernel module for obs virtual webcam
 
 ### Included apps and tools
-- [Loupe](https://apps.gnome.org/Loupe/)
-- [Celluloid](https://celluloid-player.github.io/)
-- [Gamescope](https://github.com/ValveSoftware/gamescope)
-- [Mangohud](https://github.com/flightlessmango/MangoHud)
-- [Ghostty](https://ghostty.org/)
-- [NeoVim](https://neovim.io/)
-- [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/)
-- [Git LFS](https://git-lfs.com/)
-- [btop](https://github.com/aristocratos/btop)
-- [sshfs](https://github.com/libfuse/sshfs)
-- [Podman](https://podman.io/) and [Docker](https://www.docker.com/)
+
+#### General Tools
+
+- [Loupe](https://apps.gnome.org/Loupe/) - Image Viewer
+- [Celluloid](https://celluloid-player.github.io/) - Media Player
+- [Gnome Papers](https://apps.gnome.org/Papers/) - Document Wiever
+- [Gnome Calendar](https://apps.gnome.org/Calendar/) - Calendar App
+- [Mission Center](https://missioncenter.io/) - Task Manager for Linux
+- [btop](https://github.com/aristocratos/btop) - Task Manager in the Terminal 
+- [Extension Manager](https://mattjakeman.com/apps/extension-manager) - Gnome Extensions Manager
+- [Flatseal](https://github.com/tchx84/flatseal) - Flatpak Permissions Manager
+- [Gear Lever](https://mijorus.it/projects/gearlever/) - Appimage Desktop Integration Tool
+
+#### Dev Tools
+
+- [Ghostty](https://ghostty.org/) - Terminal Emulator
+- [NeoVim](https://neovim.io/) - Code Editor
+- [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/) - Code editor
+- [Git LFS](https://git-lfs.com/) - Large File Storage with Git
 - [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
-- [Mission Center](https://missioncenter.io/)
-- [Extension Manager](https://mattjakeman.com/apps/extension-manager)
-- [Flatseal](https://github.com/tchx84/flatseal)
-- [Gnome Calendar](https://apps.gnome.org/Calendar/)
-- [Gnome Papers](https://apps.gnome.org/Papers/)
-- [Gear Lever](https://mijorus.it/projects/gearlever/)
-
-## How to use
-
-The intended way to use this image is to use [Flatpak](https://flatpak.org/) for graphical apps and [Homebrew](https://brew.sh/) for cli tools
+- [Podman](https://podman.io/) and [Docker](https://www.docker.com/) - Container Tools
+- [sshfs](https://github.com/libfuse/sshfs) - Mount Remote Directories on your Machine via SSH
 
 ## Installation
 

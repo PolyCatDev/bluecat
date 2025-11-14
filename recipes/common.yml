@@ -47,28 +47,28 @@ modules:
         - ghostty
         - btop
         - ripgrep
-        - android-tools
-        - codium
-        - neovim
-        - git-lfs
         - fuse-sshfs
 
-        # Themes
-        - adw-gtk3-theme
+        # Dev Tools
+        - neovim
+        - codium
+        - gcc
+        - gcc-c++
+        - python3-devel
+        - android-tools
+        - git-lfs
 
-        # Install Container Tools
+        # Container Tools
         - docker-ce
         - docker-ce-cli
         - containerd.io
         - docker-compose-plugin
 
+        # Themes
+        - adw-gtk3-theme
+
         # Deps
-        - gcc
-        - gcc-c++
         - nautilus-python
-        - python3-devel
-        - python3-tkinter
-        - python3-wxpython4
         - openssl
         - libxcrypt-compat
 

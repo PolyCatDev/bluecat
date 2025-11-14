@@ -52,8 +52,6 @@ modules:
         - neovim
         - git-lfs
         - fuse-sshfs
-        - gamescope
-        - mangohud
 
         # Themes
         - adw-gtk3-theme

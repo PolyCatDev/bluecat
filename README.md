@@ -6,7 +6,7 @@ An opinionated tweaked [ublue](https://universal-blue.org/) image based on [silv
 
 This is my own tweaked image deployment that I maintain for myself. It's mainly focused on 3D graphics, programming and gaming workloads.
 
-If anyone is using these images please reach out with a bug report so that I don't randomly change things on your computer.
+If anyone is using these images please reach out with a bug report so I don't randomly change things on your computer.
 
 > [!TIP]
 > If you are confused about wat BlueCat is, consider checking out the [wiki](https://github.com/PolyCatDev/bluecat/wiki/). It might help point you in the right direction.

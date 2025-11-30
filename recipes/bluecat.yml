@@ -1,3 +1,9 @@
+name: bluecat
+description: uBlue imaged tweaked by PolyCat with nvidia drivers
+
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: latest
+
 modules:
   - type: files
     files:
@@ -10,9 +16,9 @@ modules:
 
   - from-file: install-akmods.yml
 
-#  - type: script
-#    scripts:
-#      - install-otd.sh
+  #  - type: script
+  #    scripts:
+  #      - install-otd.sh
 
   - type: gnome-extensions
     install:
@@ -81,7 +87,7 @@ modules:
       auto-remove: true
       packages:
         - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - firefox-langpacks
         - gnome-shell-extension-background-logo
         - gnome-shell-extension-apps-menu
         - gnome-shell-extension-launch-new-instance
@@ -105,12 +111,12 @@ modules:
       - notify: false
       - scope: user
       - install:
-        - com.mattjakeman.ExtensionManager
-        - org.gnome.Calendar
-        - com.github.tchx84.Flatseal
-        - it.mijorus.gearlever
-        - io.missioncenter.MissionCenter
-        - org.gnome.Papers
+          - com.mattjakeman.ExtensionManager
+          - org.gnome.Calendar
+          - com.github.tchx84.Flatseal
+          - it.mijorus.gearlever
+          - io.missioncenter.MissionCenter
+          - org.gnome.Papers
 
   - type: systemd
     system:

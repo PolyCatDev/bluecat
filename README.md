@@ -15,7 +15,7 @@ If anyone is using these images please reach out with a bug report so I don't ra
 
 ### Tweaks
 
-- All the uBlue backend goodies
+- Pre-installed Nvidia proprietary drivers
 - Firefox removed (install web browser from software centre or cli)
 - Hack [Nerd Font](https://www.nerdfonts.com/) included
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/), [Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) and [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/) extensions included
@@ -50,18 +50,11 @@ If anyone is using these images please reach out with a bug report so I don't ra
 1. You first need a [Fedora Atomic Desktop](https://fedoraproject.org/atomic-desktops/) installed.
 2. Then you rebase with these commands
 
-### Image Names:
-- `bluecat:latest`
-- `bluecat-nvidia:latest`
-
 ### Commands:
-
-> [!TIP]
-> Replace `<image-name>` with the image you wish to use. If you have an Nvidia GPU use `bluecat-nvidia:latest`, else use `bluecat:latest`.
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/<image-name>
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/polycatdev/bluecat:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -69,7 +62,7 @@ If anyone is using these images please reach out with a bug report so I don't ra
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/<image-name>
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/polycatdev/bluecat:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -77,4 +70,5 @@ If anyone is using these images please reach out with a bug report so I don't ra
   ```
   
 ## Special Thanks
+
 - [asen23](https://github.com/asen23) - They helped a lot with the akmods installation setup

@@ -109,8 +109,8 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: false
-      - scope: user
-      - install:
+        scope: user
+        install:
           - com.mattjakeman.ExtensionManager
           - org.gnome.Calendar
           - com.github.tchx84.Flatseal

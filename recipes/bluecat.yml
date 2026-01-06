@@ -54,6 +54,7 @@ modules:
         - btop
         - ripgrep
         - fuse-sshfs
+        - steam
 
         # Dev Tools
         - neovim

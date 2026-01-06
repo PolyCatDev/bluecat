@@ -34,6 +34,7 @@ If anyone is using these images please reach out with a bug report so I don't ra
 - [Extension Manager](https://mattjakeman.com/apps/extension-manager) - Gnome Extensions Manager
 - [Flatseal](https://github.com/tchx84/flatseal) - Flatpak Permissions Manager
 - [Gear Lever](https://mijorus.it/projects/gearlever/) - Appimage Desktop Integration Tool
+- [Steam](https://store.steampowered.com/) - Steam Game Store
 
 #### Dev Tools
 

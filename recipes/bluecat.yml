@@ -41,7 +41,7 @@ modules:
     repos:
       files:
         - https://download.docker.com/linux/fedora/docker-ce.repo
-        - codium.repo
+#        - codium.repo
       copr:
         - pgdev/ghostty
     install:
@@ -57,7 +57,6 @@ modules:
 
         # Dev Tools
         - neovim
-        - codium
         - gcc
         - gcc-c++
         - python3-devel

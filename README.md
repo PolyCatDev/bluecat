@@ -39,7 +39,6 @@ If anyone is using these images please reach out with a bug report so I don't ra
 
 - [Ghostty](https://ghostty.org/) - Terminal Emulator
 - [NeoVim](https://neovim.io/) - Code Editor
-- [VSCodium](https://vscodium.com/) thanks to [Pavlo Rudy](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/) - Code editor
 - [Git LFS](https://git-lfs.com/) - Large File Storage with Git
 - [Android Tools (adb, fastboot)](https://developer.android.com/tools/releases/platform-tools)
 - [Podman](https://podman.io/) and [Docker](https://www.docker.com/) - Container Tools

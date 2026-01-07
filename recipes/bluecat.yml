@@ -55,6 +55,7 @@ modules:
         - ripgrep
         - fuse-sshfs
         - steam
+        - mangohud
 
         # Dev Tools
         - neovim
